@@ -80,7 +80,8 @@ def convert_df(df):
 def starting_chrome():
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+    # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+    driver = webdriver.Chrome(executable_path='chromedriver.exe', options=chrome_options)
     return driver
 
 

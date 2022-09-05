@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -50,7 +51,7 @@ def experience(section):
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
-driver = webdriver.Chrome(service=Service('chromedriver.exe'), options=chrome_options)  
+driver = webdriver.Chrome(service=Service(executable_path=os.path.abspath("chromedriver.exe")), options=chrome_options)  
 
 image = Image.open('linkedin.png')
 st.set_page_config(page_title="LinkedIn WebScrapper", page_icon=image)

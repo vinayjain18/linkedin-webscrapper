@@ -79,8 +79,7 @@ def convert_df(df):
 def starting_chrome():
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    route = ChromeDriverManager().install()
-    driver = webdriver.Chrome(service=Service(r'/home/appuser/.wdm/drivers/chromedriver/linux64/105.0.5195/chromedriver'), options=chrome_options)
+    driver = webdriver.Chrome(service=Service('chromedriver.exe'), options=chrome_options)
     return driver
 
 
@@ -89,10 +88,7 @@ if submit and csv_file is not None:
         st.error("Please Enter Username/Password")
     else:
         try:
-            #driver = starting_chrome()
-            chrome_options = Options()
-            chrome_options.add_argument("--headless")
-            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+            driver = starting_chrome()
             driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin")
 
             Email = driver.find_element(By.XPATH, '//*[@id="username"]')

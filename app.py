@@ -81,7 +81,7 @@ def starting_chrome():
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     route = ChromeDriverManager().install()
-    driver = webdriver.Chrome(service=Service(r'/home/appuser/.wdm/drivers/chromedriver/linux64/105.0.5195/chromedriver.exe'), options=chrome_options)
+    driver = webdriver.Chrome(service=Service(r'/home/appuser/.wdm/drivers/chromedriver/linux64/105.0.5195/chromedriver'), options=chrome_options)
     return driver
 
 

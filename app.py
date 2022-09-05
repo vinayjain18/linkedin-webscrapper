@@ -51,7 +51,7 @@ def experience(section):
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
-driver = webdriver.Chrome(service=Service(executable_path=os.path.abspath("chromedriver.exe")), options=chrome_options)  
+driver = webdriver.Chrome(service=Service(executable_path=os.path.abspath("chromedriver")), options=chrome_options)  
 
 image = Image.open('linkedin.png')
 st.set_page_config(page_title="LinkedIn WebScrapper", page_icon=image)

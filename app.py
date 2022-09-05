@@ -24,9 +24,9 @@ bio = {
 }
 
 def education(section):
-    f = section.find_elements(By.TAG_NAME, 'li')
+    list_tag = section.find_elements(By.TAG_NAME, 'li')
     #print(e[0].text)
-    for inde, a in enumerate(f):
+    for inde, a in enumerate(list_tag):
         if inde > 1:
             break
         else:

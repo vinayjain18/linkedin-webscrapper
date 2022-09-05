@@ -48,6 +48,10 @@ def experience(section):
     except Exception as e:
         pass
 
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+driver = webdriver.Chrome(service=Service('chromedriver.exe'), options=chrome_options)  
+
 image = Image.open('linkedin.png')
 st.set_page_config(page_title="LinkedIn WebScrapper", page_icon=image)
 st.title("Welcome to LinkedIn WebScrapper")
@@ -88,7 +92,7 @@ if submit and csv_file is not None:
         st.error("Please Enter Username/Password")
     else:
         try:
-            driver = starting_chrome()
+            #driver = starting_chrome()
             driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin")
 
             Email = driver.find_element(By.XPATH, '//*[@id="username"]')

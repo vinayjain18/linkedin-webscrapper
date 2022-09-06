@@ -124,7 +124,7 @@ if submit and csv_file is not None:
 
                     if div.text.split('\n')[0] == 'Education':
                         education(section)
-                    
+                        
                 for item in list(bio.keys()):
                     if len(bio['Name']) > len(bio[item]):
                         bio[item].append("Not Available")

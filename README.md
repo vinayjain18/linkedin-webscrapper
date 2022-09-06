@@ -13,4 +13,3 @@ If any from the above is not found then it will simply put "Not available".
 For Scrapping, I have used Selenium and then stored values in dictionary which later on converted into DataFrame. You can also download this DataFrame as CSV file.
 The app is built using Streamlit package of Python.
 
-<b>Link:</b> 
